@@ -1,0 +1,7 @@
+  body {
+  margin: auto;
+  text-align: center;
+}
+
+#answer1, #answer2, #answer3, #answer4 {
+  display: inline;

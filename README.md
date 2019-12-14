@@ -1,1 +1,1 @@
-# Random-Apps
+# A collection of small, random apps.
