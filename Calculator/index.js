@@ -24,4 +24,10 @@ clear.addEventListener("click", () => {
   alert("clicked")
 })
 
+var DOM = document.querySelector("body")
+
+body.addEventListener("click", (event) => {
+  alert(event.target.nodeName)
+})
+
 
