@@ -22,9 +22,22 @@ apiCall = () => {
         })
           .then((response) => {
             console.log(response);
+            var card = response.cards[0].value;
+            var suit = response.cards[0].suit;
+
+            console.log(card);
+            console.log(suit);
+            console.log(image);
+            var div = $("#card");
+            var image = $("<img>");
+            image.attr("src", response.cards[0].image);
+            div.append(card);
+            div.append(` of ${suit}`);
+            div.append(image);
           });
       }
       draw.on("click", drawCard);
+
     });
 };
 
