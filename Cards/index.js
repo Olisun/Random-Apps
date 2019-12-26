@@ -28,9 +28,12 @@ apiCall = () => {
             console.log(card);
             console.log(suit);
             console.log(image);
+
             var div = $("#card");
             var image = $("<img>");
             image.attr("src", response.cards[0].image);
+            image.attr("src", response.cards[0].image);
+            image.attr("margin", "auto");
             div.append(card);
             div.append(` of ${suit}`);
             div.append(image);
