@@ -4,7 +4,7 @@ var newCityButton = $("#new-city-submitted");
 var currentCitiesButtons = $("#city-buttons");
 var weatherInfo = $("#weather-info");
 
-// $(document).on("click", "city-button", apiCall);
+$(document).on("click", ".thisCity", apiCall);
 
 createButton = () => {
   currentCitiesButtons.empty();
@@ -26,6 +26,21 @@ newCityButton.on("click", event => {
   createButton();
 })
 
-apiCall = () => {
+function apiCall() {
   var dataAttributeCity = $(this).attr("data-city");
+  var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${dataAttributeCity}&APPID=74d340d237b6d2940eb2ab87c453587a`;
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+    .then(response => {
+      console.log(queryURL);
+      console.log(response);
+      var city = response.name;
+      console.log(city);
+      var weatherCallsFor = response.weather[0].main;
+      console.log(weatherCallsFor);
+      var weatherDescription = response.weather[0].description;
+      console.log(weatherDescription);
+    })
 }
