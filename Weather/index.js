@@ -42,5 +42,13 @@ function apiCall() {
       console.log(weatherCallsFor);
       var weatherDescription = response.weather[0].description;
       console.log(weatherDescription);
+      // Now the DOM
+      weatherInfo.empty();
+      var cityDOM = $("<h1>").text(`The weather in ${city}`);
+      var weatherForcastDOM = $("<p>").text(`Current: ${weatherCallsFor}`);
+      var weatherDescription = $("<p>").text(`Description: ${weatherDescription}`);
+      weatherInfo.append(cityDOM);
+      weatherInfo.append(weatherForcastDOM);
+      weatherInfo.append(weatherDescription);
     })
 }
