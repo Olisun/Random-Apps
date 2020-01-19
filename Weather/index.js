@@ -42,13 +42,22 @@ function apiCall() {
       console.log(weatherCallsFor);
       var weatherDescription = response.weather[0].description;
       console.log(weatherDescription);
+      var tempKelvin = response.main.temp;
+      console.log(tempKelvin);
+      var tempFahrenheit = ((tempKelvin - 273.15) * 1.8) + 32;
+      console.log(tempFahrenheit);
       // Now the DOM
       weatherInfo.empty();
-      var cityDOM = $("<h1>").text(`The weather in ${city}`);
-      var weatherForcastDOM = $("<p>").text(`Current: ${weatherCallsFor}`);
+      var cityDOM = $("<h5>").text(city);
+      var weatherForcastDOM = $("<p>").text(`Current Condition: ${weatherCallsFor}`);
       var weatherDescription = $("<p>").text(`Description: ${weatherDescription}`);
+      var weatherTemp = $("<p>").text(`Current Tempurature: ${tempFahrenheit}`);
       weatherInfo.append(cityDOM);
       weatherInfo.append(weatherForcastDOM);
       weatherInfo.append(weatherDescription);
+      weatherInfo.append(weatherTemp);
     })
 }
+
+
+
