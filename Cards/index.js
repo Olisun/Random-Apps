@@ -23,9 +23,9 @@ apiCall = () => {
           .then((response) => {
             console.log(response);
             var card = response.cards[0].value;
-            var suit = response.cards[0].suit;|
+            var suit = response.cards[0].suit;
 
-              console.log(card);
+            console.log(card);
             console.log(suit);
             console.log(image);
 

@@ -44,20 +44,31 @@ function apiCall() {
       console.log(weatherDescription);
       var tempKelvin = response.main.temp;
       console.log(tempKelvin);
-      var tempFahrenheit = ((tempKelvin - 273.15) * 1.8) + 32;
+      var tempFahrenheit = Math.round(((tempKelvin - 273.15) * 1.8) + 32);
       console.log(tempFahrenheit);
       // Now the DOM
+      var location = $("#for-city");
+      var tableRow1 = $("<tr>");
+      var tableRow2 = $("<tr>");
+
+      location.empty();
       weatherInfo.empty();
-      var cityDOM = $("<h5>").text(city);
-      var weatherForcastDOM = $("<p>").text(`Current Condition: ${weatherCallsFor}`);
-      var weatherDescription = $("<p>").text(`Description: ${weatherDescription}`);
-      var weatherTemp = $("<p>").text(`Current Tempurature: ${tempFahrenheit}`);
-      weatherInfo.append(cityDOM);
-      weatherInfo.append(weatherForcastDOM);
-      weatherInfo.append(weatherDescription);
-      weatherInfo.append(weatherTemp);
+
+      tableRow1.append(
+        $("<th>").text("Current Condition"),
+        $("<th>").text("Description"),
+        $("<th>").text("Current Temp F"),
+      )
+      tableRow2.append(
+        $("<td>").text(weatherCallsFor),
+        $("<td>").text(weatherDescription),
+        $("<td>").text(tempFahrenheit)
+      );
+
+      location.append(city);
+      weatherInfo.append(tableRow1);
+      weatherInfo.append(tableRow2);
     })
 }
-
 
 
