@@ -19,6 +19,13 @@ th, tr, td {
   border: 1px solid black;
 }
 
+button {
+  margin: 10px;
+  box-shadow: 6px 6px 10px 0px rgba(13, 1, 1, 0.75);
+  -webkit-box-shadow: 6px 6px 10px 0px rgba(13, 1, 1, 0.75);
+  -moz-box-shadow: 6px 6px 10px 0px rgba(13, 1, 1, 0.75);
+}
+
 #for-city {
   margin-top: 40px;
   font-size: 30px;

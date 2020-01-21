@@ -3,6 +3,7 @@ var currentCities = ['San Francisco', 'Seattle', 'Los Angeles', 'New York', 'Was
 var newCityButton = $("#new-city-submitted");
 var currentCitiesButtons = $("#city-buttons");
 var weatherInfo = $("#weather-info");
+var message = $("#for-message");
 
 $(document).on("click", ".thisCity", apiCall);
 
@@ -68,7 +69,28 @@ function apiCall() {
       location.append(city);
       weatherInfo.append(tableRow1);
       weatherInfo.append(tableRow2);
+
+
+      switch (weatherCallsFor) {
+        case "Clear":
+          message.text("Looks to be a nice day!")
+          break;
+        case "Clouds":
+          message.text("At least it's not raining.")
+          break;
+        case "Rain":
+          ("Don't forget the umbrella.")
+          break;
+        case "Snow":
+          ("Better bundle up!")
+          break;
+        default:
+          ("Roll the dice")
+          break;
+      }
     })
 }
+
+
 
 
