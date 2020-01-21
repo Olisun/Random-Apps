@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Oliver Sun",
+    "age": 48,
+    "type": "Person"
+  },
+  {
+    "name": "Taylor Sun",
+    "age": 9,
+    "type": "Wiggly"
+  }
+]
