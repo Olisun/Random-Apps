@@ -2,11 +2,27 @@
   {
     "name": "Oliver Sun",
     "age": 48,
-    "type": "Person"
+    "type": "Person",
+    "FavFoods": [
+      "KFC",
+      "White Knua Knu"
+    ],
+    "address": {
+      "street": "260 Clara",
+      "city": "San Francisco"
+    }
   },
   {
     "name": "Taylor Sun",
     "age": 9,
-    "type": "Wiggly"
+    "type": "Wiggly",
+    "FavFoods": [
+      "Tweets",
+      "Buddy Tweets"
+    ],
+    "address": {
+      "street": "260 Clara",
+      "city": "San Francisco"
+    }
   }
 ]

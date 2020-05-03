@@ -9,9 +9,7 @@ table {
   margin-top: 40px;
   color: blue;
   border: 1px solid black;
-  box-shadow: 6px 6px 10px 0px rgba(13, 1, 1, 0.75);
-  -webkit-box-shadow: 6px 6px 10px 0px rgba(13, 1, 1, 0.75);
-  -moz-box-shadow: 6px 6px 10px 0px rgba(13, 1, 1, 0.75);
+  box-shadow: 0 2.6px 2.2px rgba(0, 0, 0, 0.031), 0 6.3px 5.3px rgba(0, 0, 0, 0.044), 0 11.9px 10px rgba(0, 0, 0, 0.055), 0 21.2px 17.9px rgba(0, 0, 0, 0.066), 0 39.7px 33.4px rgba(0, 0, 0, 0.079), 0 95px 80px rgba(0, 0, 0, 0.11);
 }
 
 th, tr, td {
@@ -21,9 +19,7 @@ th, tr, td {
 
 button {
   margin: 10px;
-  box-shadow: 6px 6px 10px 0px rgba(13, 1, 1, 0.75);
-  -webkit-box-shadow: 6px 6px 10px 0px rgba(13, 1, 1, 0.75);
-  -moz-box-shadow: 6px 6px 10px 0px rgba(13, 1, 1, 0.75);
+  box-shadow: 0 2.6px 2.2px rgba(0, 0, 0, 0.031), 0 6.3px 5.3px rgba(0, 0, 0, 0.044), 0 11.9px 10px rgba(0, 0, 0, 0.055), 0 21.2px 17.9px rgba(0, 0, 0, 0.066), 0 39.7px 33.4px rgba(0, 0, 0, 0.079), 0 95px 80px rgba(0, 0, 0, 0.11);
 }
 
 #for-city {

@@ -5,12 +5,22 @@ const initialData = [
   {
     name: "Oliver Sun",
     age: 48,
-    type: "Person"
+    type: "Person",
+    FavFoods: ["KFC", "White Knua Knu"],
+    address: {
+      street: "260 Clara",
+      city: "San Francisco"
+    }
   },
   {
     name: "Taylor Sun",
     age: 9,
-    type: "Wiggly"
+    type: "Wiggly",
+    FavFoods: ["Tweets", "Buddy Tweets"],
+    address: {
+      street: "260 Clara",
+      city: "San Francisco"
+    }
   }
 ]
 
@@ -23,7 +33,7 @@ fs.writeFile("./theData.json", jsonString, error => {
   }
 });
 
-// Below is a helper function to read the json file. 
+// Below is a helper function to read the json file.
 function jsonReader(filePath, callback) {
   fs.readFile(filePath, (error, fileData) => {
     if (error) {
@@ -43,5 +53,32 @@ jsonReader("./theData.json", (error, initialData) => {
     console.log(error)
     return
   }
-  console.log(initialData)
+})
+
+const moreData = [
+  {
+    name: "Oliver Sun",
+    age: 48,
+    type: "Person",
+    FavFoods: ["KFC", "White Knua Knu"],
+    address: {
+      street: "260 Clara",
+      city: "San Francisco"
+    }
+  },
+  {
+    name: "Taylor Sun",
+    age: 9,
+    type: "Wiggly",
+    FavFoods: ["Tweets", "Buddy Tweets"],
+    address: {
+      street: "260 Clara",
+      city: "San Francisco"
+    }
+  }
+]
+fs.writeFile("./theData.json", JSON.stringify(moreData), (error) => {
+  if (error) {
+    console.log("error writing file:", error)
+  }
 })

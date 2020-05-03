@@ -263,6 +263,12 @@
   transform: rotateX(-90deg) translateZ(100px);
 }
 
+.first-face {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .second-face .pip:nth-of-type(2) {
   align-self: flex-end;
 }
